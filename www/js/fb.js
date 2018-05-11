@@ -62,6 +62,33 @@ function funL() {
 	}});
 }
 
+function funLG(){
+	var provider = new firebase.auth.GoogleAuthProvider();
+	firebase.auth().signInWithRedirect(provider).then(function() {
+		return firebase.auth().getRedirectResult();
+	}).then(function(result) {
+		var token = result.credential.accessToken;
+		var user = result.user;
+	}).catch(function(error) {
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		alert("Error: "+errorMessage);
+	});
+}
+function funLF() {
+	var provider = new firebase.auth.FacebookAuthProvider();
+	firebase.auth().signInWithRedirect(provider).then(function(result) {
+		var token = result.credential.accessToken; 
+		var user = result.user; 
+		console.log("TOKEN: "+token); 
+		console.log("USER"+user);
+	}).catch(function(error) {
+		var errorCode = error.code;
+		var errorMessage = error.message;
+		alert("Error: "+errorMessage);
+	});
+}
+
 function logout() {
 	errorCode = "";
 	firebase.auth().signOut().catch(function (error) {
