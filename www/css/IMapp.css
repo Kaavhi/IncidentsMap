@@ -265,7 +265,7 @@ input[type=text], input[type=password] {
     background: -webkit-gradient(linear, left top, left bottom, from(#d46c6c), to(#800b0b));
     background: -moz-linear-gradient(top, #d46c6c, #800b0b);
     background: linear-gradient(to bottom, #d46c6c, #800b0b);
-    text-shadow: #eab5b5 1px 1px 1px;
+    text-shadow: #5f2828 1px 1px 1px;
     font: normal normal bold 17px verdana;
     display: inline-block;
     color: #ffffff;
@@ -284,6 +284,24 @@ input[type=text], input[type=password] {
     background: -moz-linear-gradient(top, #6b6b6b, #313131);
     background: linear-gradient(to bottom, #6b6b6b, #313131);
     text-shadow: #111 1px 1px 1px;
+    font: normal normal bold 17px verdana;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 12px;
+}
+
+.buttonU {
+  	width: 70%;
+  	height: 15px;
+    padding: 15px 20px;
+    border: 2px solid #f9f9f9;
+    border-radius: 15px;
+    background: #202020;
+    background: -webkit-gradient(linear, left top, left bottom, from(#222), to(#111));
+    background: -moz-linear-gradient(top, #222, #111);
+    background: linear-gradient(to bottom, #222, #111);
+    text-shadow: #190101 1px 1px 1px;
     font: normal normal bold 17px verdana;
     display: inline-block;
     color: #ffffff;
