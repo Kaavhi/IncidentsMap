@@ -1,6 +1,7 @@
 function wykres() {
 var ctx = document.getElementById("myChart").getContext('2d');
 var incidents = getI();
+
 var zag = 0;
 var mor = 0;
 var zgb = 0;
@@ -8,7 +9,7 @@ var wyp = 0;
 var nap = 0;
 var kra = 0;
 var stl = 0;
-	alert(incidents.length);
+alert(incidents.length);
 
 for (var i = 0; i < incidents.length; i++) {
 	switch(incidents[i][3]) {
