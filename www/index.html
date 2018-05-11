@@ -13,13 +13,14 @@
     <script type="text/javascript" src="js/pgb.js"></script>
     <script type="text/javascript" src="js/fb.js"></script>
     <script type="text/javascript" src="js/operationfb.js"></script>
-	<script type="text/javascript" src="js/chart.js"></script>
+	<script type="text/javascript" src="js/wykres.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzHB9x2HdN3Fxo1zM1gbyXxDL79swmdi4&libraries=visualization"></script>
-	<script src="js/wykres.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.pkgd.min.js"></script>
 	<script>
         $("#map-canvas").load(readFb());
-		$("#myChart").load(wykres());
+		$("#BarChart").load(wykres());
     </script>
 	<script src="https://www.gstatic.com/firebasejs/5.0.1/firebase.js"></script>
     <script>
@@ -133,7 +134,8 @@
 		<a href class="buttonW" onclick='heat();'><font color="white">Mapa zagrożeń</font></a>
 		<a href class="buttonW" onclick='normal();'><font color="white">Normalny widok</font></a>
 		<br><br>
-		<a href ="#chart" class="buttonM" onclick="wykres()"><font color="black">Chart</font></a><br>
+		<a href ="#chart" class="buttonM" onclick="wykres()"><font color="black">Wykresy</font></a>
+		<br><br>
 		<a href class="buttonU" onclick='logout();'><font color="#b92424">Wyloguj się</font></a>
 		<br><br>
         </div>
@@ -141,7 +143,8 @@
 
 	<div data-role="page" id="chart" data-title="Wykresy" onload="wykres()">
     <div class="back" align="center">
-	<canvas id="myChart" width="300" height="300"></canvas>
+	<label for="chart"><font size=3 color="white">Ilość zgłoszonych incydentów</font></label><br>
+	<div id="BarChart"></div><br>
 	<br>
 	<img src="wykres.png"style="width:90%;height:90%;"><br>
 	<label for="chart"><font size=3 color="white">Wygenerowane przy użyciu Microsoft Power BI</font></label><br>
